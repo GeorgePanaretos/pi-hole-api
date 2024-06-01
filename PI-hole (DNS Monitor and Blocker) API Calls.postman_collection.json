@@ -1,0 +1,962 @@
+{
+	"info": {
+		"_postman_id": "",
+		"name": "PI-hole (DNS Monitor and Blocker) API Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26608400"
+	},
+	"item": [
+		{
+			"name": "Get version (no auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?version",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Summary info formatted (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?summary&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "summary",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Summary statistics info in raw format (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?summaryRaw&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "summaryRaw",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Backend type (no auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?type",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stats data last 10 minutes (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?overTimeData10mins&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "overTimeData10mins",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get recentBlocked (auth)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?recentBlocked&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "recentBlocked",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get top 10 items list (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?topItems=10&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "topItems",
+							"value": "10"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get query sources (auth)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?getQuerySources=100&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "getQuerySources",
+							"value": "100"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top blocked sources (auth)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?topClientsBlocked&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "topClientsBlocked",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top queries and ads (auth)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?topItems&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "topItems",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top  clients dynamic (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?topClients=10&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "topClients",
+							"value": "10"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top clients static default 10  (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?topClients&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "topClients",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get query type percentages (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?getQueryTypes&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "getQueryTypes",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get query sources (auth)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?getQuerySources=100&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "getQuerySources",
+							"value": "100"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all queries (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?getAllQueries&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "getAllQueries",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get forwarding destinations (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?getForwardDestinations&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "getForwardDestinations",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get forwarding destinations count (auth)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?getForwardDestinations=10&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "getForwardDestinations",
+							"value": "10"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cache info",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?getCacheInfo&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "getCacheInfo",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get over time data clients",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?overTimeDataClients&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "overTimeDataClients",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add site to black list",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?list=black&add=badsite.com&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "list",
+							"value": "black"
+						},
+						{
+							"key": "add",
+							"value": "badsite.com"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete site from black list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?list=black&sub=badsite.com&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "list",
+							"value": "black"
+						},
+						{
+							"key": "sub",
+							"value": "badsite.com"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add site to white list",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?list=white&add=goodsite.com&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "list",
+							"value": "white"
+						},
+						{
+							"key": "add",
+							"value": "goodsite.com"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete site from white list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?list=white&sub=goodsite.com&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "list",
+							"value": "white"
+						},
+						{
+							"key": "sub",
+							"value": "goodsite.com"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get status (Enabled/Disabled)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?status&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?disable&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "disable",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable for XX seconds",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?disable=20&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "disable",
+							"value": "20"
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{pihole}}/admin/api.php?enable&auth={{piholetoken}}",
+					"protocol": "http",
+					"host": [
+						"{{pihole}}"
+					],
+					"path": [
+						"admin",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "enable",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": "{{piholetoken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.environment.get(\"variable_key\");"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "pihole",
+			"value": "putYourPiHoleIPHere",
+			"type": "string"
+		},
+		{
+			"key": "piholetoken",
+			"value": "putYourTokenHere",
+			"type": "string"
+		}
+	]
+}
