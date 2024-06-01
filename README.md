@@ -9,6 +9,21 @@ This collection enables you to automate the management of your PI-hole server, i
 ## Schema
 The collection is structured according to the Postman Collection v2.1.0 schema.
 
+## How to Use
+
+1. **Import the Collection**:
+   - Download the Postman collection JSON file and import it into your Postman app.
+
+2. **Configure Environment**:
+   - Set up your environment variables such as `pihole` and `piholetoken` to match your PI-hole instance.
+
+3. **Execute Requests**:
+   - Use the various requests in the collection to manage your PI-hole server, adjusting parameters as needed.
+
+### Importing in Postman
+
+This collection includes a set of API calls for managing and monitoring a PI-hole DNS server. PI-hole is a network-wide ad blocker that helps to block ads at the DNS level. The collection features endpoints to add or remove domains from blacklists and whitelists, enable or disable domains, and perform various administrative tasks. These API calls enable you to automate and streamline the configuration and management of your PI-hole instance.
+
 ## API Endpoints
 
 ### 1. Get version (no auth)
@@ -166,19 +181,4 @@ The collection is structured according to the Postman Collection v2.1.0 schema.
 - **Method**: GET
 - **URL**: `http://{{pihole}}/admin/api.php?enable&auth={{piholetoken}}`
 - **Headers**: None
-
-## How to Use
-
-1. **Import the Collection**:
-   - Download the Postman collection JSON file and import it into your Postman app.
-
-2. **Configure Environment**:
-   - Set up your environment variables such as `pihole` and `piholetoken` to match your PI-hole instance.
-
-3. **Execute Requests**:
-   - Use the various requests in the collection to manage your PI-hole server, adjusting parameters as needed.
-
-### Importing in Postman
-
-This collection includes a set of API calls for managing and monitoring a PI-hole DNS server. PI-hole is a network-wide ad blocker that helps to block ads at the DNS level. The collection features endpoints to add or remove domains from blacklists and whitelists, enable or disable domains, and perform various administrative tasks. These API calls enable you to automate and streamline the configuration and management of your PI-hole instance.
 
